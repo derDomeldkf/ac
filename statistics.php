@@ -18,7 +18,7 @@ function stats($username) {
     $content.='<table class="table table-striped audiolist"><thead><tr><th>Name</th><th>Duration</th><th>Worked Time</th><th>Hourly Rate</th><th>Total pay</th><th>Finished</th></tr></thead><tbody>';
     
     $content.='</tbody></table>';
-    $content.='<div class="audioname_stats" style="margin:10px;"></div><div class="container monthavg"><div class="row"><div class="col-xs-6">Total income for this month (before tax) is: </div><div class="col-xs-6"><img src="icons/coin_gold.png"/> <span class="total"></span></div></div>'
+    $content.='<div class="audioname_stats" style="margin: 30px 10px 30px 10px;"></div><div class="container monthavg"><div class="row"><div class="col-xs-6">Total income for this month (before tax) is: </div><div class="col-xs-6"><img src="icons/coin_gold.png"/> <span class="total"></span></div></div>'
             . '<div class="row"><div class="col-xs-6">Total work hours this month: </div><div class="col-xs-6"><img src="icons/alarmclock.png"/> <span class="totalhrs"></span></div></div>'
             . '<div class="row"><div class="col-xs-6">Average hourly rate: </div><div class="col-xs-6"><img src="icons/coin_gold.png"/>/<img src="icons/alarmclock.png"/> <span class="avgrate"></span></div>';
     $content.= '</div></div>';
