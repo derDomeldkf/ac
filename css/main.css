@@ -86,3 +86,6 @@ body {
 .monthavg .row {
     margin: 7px;
 }
+td {
+   padding-left: 3px;
+   }
