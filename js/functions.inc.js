@@ -3,8 +3,13 @@ $(document).ready(function(){
    $('.notepad').trumbowyg({
         autogrow: true,
         fullscreenable: false,
-        btns: ['btnGrp-design', '|', 'btnGrp-lists', '|', 'link', 'formatting']
+        btns: ['btnGrp-design', '|', 'btnGrp-lists', '|', 'link', 'formatting',  'table',  'tableAddRow']
     });
+   
+   
+   
+   
+   
     $("#savelink").click(function() {
         addaudio();
     });
