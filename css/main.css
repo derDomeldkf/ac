@@ -91,3 +91,16 @@ td {
    padding-left: 3px;
 }
 
+#mybtn{
+	background-image: url(../icons/add2.png);
+	background-repeat: no-repeat;
+	background-position:5px, 5px;
+}
+
+#mybtn2{
+	background-image: url(../icons/del2.png);
+	background-repeat: no-repeat;
+	background-position:5px, 5px;
+
+}
+	
