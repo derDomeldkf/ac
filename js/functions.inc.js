@@ -232,7 +232,7 @@ var dashboard = function() {
             }, 1000);
         }
         
-            $.post("backend/notepad.php", {action: "get"}, function(data) {
+            $.post("backend/notepad.php", {action: "get", audioname: $('.activeaudio').text()}, function(data) {
         if(data==="$noentry$") {
             $('.notepad').html('');
         }
@@ -331,7 +331,7 @@ var notepad =function() {
     
     function update() {
         // send the content to the server
-        $.post("backend/notepad.php", {action: "set", content: $('.notepad').html()}, function(data) {
+        $.post("backend/notepad.php", {action: "set", content: $('.notepad').html(), $('.activeaudio').text()}, function(data) {
             if(data==="1") {
                 that.uptodate=1;
             }
