@@ -165,7 +165,7 @@ $(document).ready(function(){
         else {
 	  var size =1000;
 	 
-	 var Timer = setTimeout($('.audioname_stats').hide().html("<h4>Mistakes in Audio "+audioname+"</h4>"+data).fadeIn(size), size);
+	 setTimeout( $('.audioname_stats').hide().html('<h4>Mistakes in Audio '+audioname+'</h4>'+data).fadeIn(size), 1000);
             
 	    $('.monthavg').fadeOut(size);
 	    $('#overall').fadeOut(size);
