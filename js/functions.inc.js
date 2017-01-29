@@ -1,10 +1,6 @@
 $(document).ready(function(){
     $('#savelink').focus();
-     $('.notepad').trumbowyg({
-        autogrow: true,
-        fullscreenable: false,
-        btns: ['btnGrp-design', '|', 'btnGrp-lists', '|', 'link', 'formatting']
-    });
+   
     $("#savelink").click(function() {
         addaudio();
     });
@@ -122,7 +118,11 @@ $(document).ready(function(){
         this.blur();
         dash.stop();
     });
-   
+     $('.notepad').trumbowyg({
+        autogrow: true,
+        fullscreenable: false,
+        btns: ['btnGrp-design', '|', 'btnGrp-lists', '|', 'link', 'formatting']
+    });
      if( $('.activeaudio').text() !=="None"){
     $('.trumbowyg').on('tbwchange', function() {
         note.change();
