@@ -88,7 +88,8 @@ function createend($page) {
     <script src="js/jquery-1.11.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/functions.inc.js"></script>
-    <script src="js/trumbowyg/dist/trumbowyg.min.js"></script>';
+    <script src="js/trumbowyg/dist/trumbowyg.min.js"></script>
+    <script src="js/trumbowyg/dist/plugin/table/trumbowyg.table.min.js"></script>';
     switch ($page) {
     case "main":
         $content.='<script src="js/main.js"></script>';
