@@ -251,7 +251,7 @@ var dashboard = function() {
         }
         else {
             $('.notepad').html(data);
-	    alert("morepanic");
+	    alert("<br>"+data+"<br>");
         }
     });
         
