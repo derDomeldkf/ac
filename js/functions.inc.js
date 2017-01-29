@@ -1,10 +1,6 @@
 $(document).ready(function(){
     $('#savelink').focus();
-    $('.notepad').trumbowyg({
-        autogrow: true,
-        fullscreenable: false,
-        btns: ['btnGrp-design', '|', 'btnGrp-lists', '|', 'link', 'formatting']
-    });
+   
     $("#savelink").click(function() {
         addaudio();
     });
@@ -202,6 +198,15 @@ var dashboard = function() {
         this.sincebreak=0;
         this.entry=entry;
         this.state="disabled";
+	$('.lastc').html('<h2>Notepad</h2><p>Notes are saved nearly in real time. Current status: <img src="icons/valid.png" alt="Saved" id="notestatus"/></p><div class="notepad"></div>');
+ $('.notepad').trumbowyg({
+        autogrow: true,
+        fullscreenable: false,
+        btns: ['btnGrp-design', '|', 'btnGrp-lists', '|', 'link', 'formatting']
+    });
+	
+	
+	
     };
     this.start=function() {
         if(this.state==="disabled") {
