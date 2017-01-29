@@ -152,8 +152,25 @@ $(document).ready(function(){
      	$('#t1 tr:last').remove();
     });
     $(document).on("click", "a", function(){
-    $(this).text("It works!");
-});
+       var audioname = this.text();
+      
+      
+      $.post("backend/notepad.php", {action: "get", audioname: audioname}, function(data) {
+        if(data==="$noentry$" || data==="<br>") {
+	  
+	}
+        else if(data==="0") {
+            alert("Something went wrong.");
+        }
+        else {
+            $('.audioname_stats').html(data);
+	   
+        }
+    });
+      
+      
+      
+    });
 
 });
 
