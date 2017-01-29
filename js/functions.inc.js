@@ -1,5 +1,10 @@
 $(document).ready(function(){
     $('#savelink').focus();
+    $('.notepad').trumbowyg({
+        autogrow: true,
+        fullscreenable: false,
+        btns: ['btnGrp-design', '|', 'btnGrp-lists', '|', 'link', 'formatting']
+    });
     $("#savelink").click(function() {
         addaudio();
     });
@@ -118,16 +123,10 @@ $(document).ready(function(){
         dash.stop();
     });
     $('.trumbowyg').on('tbwchange', function() {
-		 if( $('.activeaudio').text() !=="None"){       
-               note.change();
-               alert("test");
-           }
+        note.change();
     });
     $('.trumbowyg').on('tbwpaste', function() {
-    	 if( $('.activeaudio').text() !=="None"){
         note.change();
-        
-     }
     });
 });
 
@@ -203,15 +202,6 @@ var dashboard = function() {
         this.sincebreak=0;
         this.entry=entry;
         this.state="disabled";
-        
-        	$('.lastc').html('<h2>Notepad</h2><p>Notes are saved nearly in real time. Current status: <img src="icons/valid.png" alt="Saved" id="notestatus"/></p><div class="notepad"></div>');
-	$('.notepad').trumbowyg({
-        autogrow: true,
-        fullscreenable: false,
-        btns: ['btnGrp-design', '|', 'btnGrp-lists', '|', 'link', 'formatting']
-    });
-        
-        
     };
     this.start=function() {
         if(this.state==="disabled") {
@@ -230,20 +220,6 @@ var dashboard = function() {
                 }
             }, 1000);
         }
-        
- //get the content from the server
-    $.post("backend/notepad.php", {action: "get", audioname: $('.activeaudio').text()}, function(data) {
-        if(data==="$noentry$") {
-            $('.notepad').html('');
-        }
-        else if(data==="0") {
-            alert("Something went wrong.");
-        }
-        else {
-            $('.notepad').html(data);
-        }
-    });        
-        
     };
     this.stop=function() {
         this.sincebreak=0;
@@ -300,7 +276,18 @@ var notepad =function() {
     var uptodate;
     var timeout;
     var that=this;
-   
+    //get the content from the server
+    $.post("backend/notepad.php", {action: "get"}, function(data) {
+        if(data==="$noentry$") {
+            $('.notepad').html('');
+        }
+        else if(data==="0") {
+            alert("Something went wrong.");
+        }
+        else {
+            $('.notepad').html(data);
+        }
+    });
     setInterval(function() {
         if(that.uptodate===1) {
             $('#notestatus').attr("src","icons/valid.png");
@@ -329,7 +316,7 @@ var notepad =function() {
     
     function update() {
         // send the content to the server
-        $.post("backend/notepad.php", {action: "set", content: $('.notepad').html(),  audioname: $('.activeaudio').text()}, function(data) {
+        $.post("backend/notepad.php", {action: "set", content: $('.notepad').html()}, function(data) {
             if(data==="1") {
                 that.uptodate=1;
             }
