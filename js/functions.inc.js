@@ -331,7 +331,7 @@ var notepad =function() {
     
     function update() {
         // send the content to the server
-        $.post("backend/notepad.php", {action: "set", content: $('.notepad').html(), $('.activeaudio').text()}, function(data) {
+        $.post("backend/notepad.php", {action: "set", content: $('.notepad').html(), audioname: $('.activeaudio').text()}, function(data) {
             if(data==="1") {
                 that.uptodate=1;
             }
