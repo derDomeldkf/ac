@@ -163,13 +163,13 @@ $(document).ready(function(){
             alert("Something went wrong.");
         }
         else {
-	  var size=600;       
+	  var size=500;       
 	  $('.monthavg').fadeOut(size);
 	  $('#overall').fadeOut(size);
 	  
 	  $(".audioname_stats").css("margin", "30px 10px 30px 10px");
 	  
-	  $('.audioname_stats').delay( size ).hide().html('<h4>Mistakes in Audio '+audioname+'</h4>'+data).fadeIn(size);
+	  $('.audioname_stats').delay( size ).hide().html('<h4>Mistakes in Audio '+audioname+'</h4>'+data).fadeIn(size+200);
 
         }
     });
