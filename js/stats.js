@@ -3,7 +3,6 @@ $(document).ready(function(){
             if(data!=="0" && data!=="[]") {
                 //that's the list
                 var months=$.parseJSON(data);
-		alert(months);
                 $('.monthsel option').remove();
                 for (index = 0; index < months.length; index++) {
                     if(index<(months.length)) {
