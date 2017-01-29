@@ -4,7 +4,7 @@ $(document).ready(function(){
         autogrow: true,
         fullscreenable: false,
         btns: ['btnGrp-design', '|', 'btnGrp-lists', '|', 'link', 'formatting',  'table',  'tableAddRow'],
-	tableBuild();
+	
     });
    
     
