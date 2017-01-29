@@ -34,7 +34,7 @@ $(document).ready(function(){
                 totalwtime+=wtime;
                 var payh=pay/wtime*3600;
                 total+=pay;
-                $('.audiolist tbody').append("<tr><td><a href='#"+entries[index]["name"]+"'>"+entries[index]["name"]+"</a></td><td>"+entries[index]["duration"]+"</td><td>"+entries[index]["wduration"]+"</td><td><img src=\"icons/coin_gold.png\"/>/<img src=\"icons/alarmclock.png\"/> "+(Math.round(payh * 100) / 100).toFixed(2)
+                $('.audiolist tbody').append("<tr><td><a id='"+entries[index]["name"]+"'>"+entries[index]["name"]+"</a></td><td>"+entries[index]["duration"]+"</td><td>"+entries[index]["wduration"]+"</td><td><img src=\"icons/coin_gold.png\"/>/<img src=\"icons/alarmclock.png\"/> "+(Math.round(payh * 100) / 100).toFixed(2)
                         +"€</td><td><img src=\"icons/coin_gold.png\"/> "+(Math.round(pay * 100) / 100).toFixed(2)+"€</td><td>"+entries[index]["created"]+"</td></tr>");
             }
             total=(Math.round(total * 100) / 100).toFixed(2);
