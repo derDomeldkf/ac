@@ -154,7 +154,6 @@ $(document).ready(function(){
     $(document).on("click", "p", function(){
        var audioname = $(this).text();
        if ($('.audioname_stats').html()===''){
-	 alert("leer");
 	    $.post("backend/notepad.php", {action: "get", audioname: audioname}, function(data) {
 	    if(data==="$noentry$" || data==="<br>") {
 	    }
@@ -172,7 +171,6 @@ $(document).ready(function(){
 	  });
        }
        else{
-	 $(this).attr("href", "#" + $(this).text());
 	 var size=500;  
 	 $('html, body').animate({scrollTop:0}, size);
 	 $('.audioname_stats').fadeOut(size).html('');
