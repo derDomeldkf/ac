@@ -153,7 +153,6 @@ $(document).ready(function(){
     });
     $(document).on("click", "a", function(){
        var audioname = $(this).attr('href').replace("#",""); // Ersetzt das erste 'bar'
-       alert(audioname);
        if (audioname !== ""){
 	  $("a").attr("href", "#");
 	  $.post("backend/notepad.php", {action: "get", audioname: audioname}, function(data) {
