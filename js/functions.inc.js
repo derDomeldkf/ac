@@ -7,15 +7,13 @@ $(document).ready(function(){
         ['viewHTML'],
         ['formatting'],
         'btnGrp-semantic',
-        ['superscript', 'subscript'],
-        ['link'],
-        ['insertImage'],
+               
+        
         'btnGrp-justify',
         'btnGrp-lists',
-        ['horizontalRule'],
+        
         ['removeformat'],
-        ['table'],
-	['tableAddRow']
+        
 	
     ]
 	
