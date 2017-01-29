@@ -163,9 +163,11 @@ $(document).ready(function(){
             alert("Something went wrong.");
         }
         else {
-            $('.audioname_stats').html("<h4>Mistakes in Audio "+audioname+"</h4>"+data);
-	    $('.monthavg').fadeOut(1000);
-	    $('#overall').fadeOut(1000);
+	  var size =1000;
+	  Timer = setTimeout('start()', size);
+            $('.audioname_stats')..hide().html("<h4>Mistakes in Audio "+audioname+"</h4>"+data).fadeIn(size);
+	    $('.monthavg').fadeOut(size);
+	    $('#overall').fadeOut(size);
         }
     });
       
