@@ -125,10 +125,14 @@ $(document).ready(function(){
      
      
     $('.trumbowyg').on('tbwchange', function() {
+      if( $('.activeaudio').text() !=="None"){
         note.change();
+      }
     });
     $('.trumbowyg').on('tbwpaste', function() {
+      if( $('.activeaudio').text() !=="None"){
         note.change();
+      }
     });
      
      
