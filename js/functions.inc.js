@@ -164,8 +164,9 @@ $(document).ready(function(){
         }
         else {
 	 var size=1000;
+	 function getmist(){$('.audioname_stats').hide().html('<h4>Mistakes in Audio '+audioname+'</h4>'+data).fadeIn(size);}
 	 setTimeout('getmist()', 3000);
-              function getmist(){$('.audioname_stats').hide().html('<h4>Mistakes in Audio '+audioname+'</h4>'+data).fadeIn(size);}
+              
 	    $('.monthavg').fadeOut(size);
 	    $('#overall').fadeOut(size);
         }
