@@ -124,7 +124,7 @@ $(document).ready(function(){
     $('.trumbowyg').on('tbwpaste', function() {
         note.change();
     });
-      $('.trumbowyg-textarea').on('tbwchange', function() {
+      $('.trumbowyg').on('tbwchange', function() {
         alert("test");
     });
     
@@ -212,7 +212,7 @@ var dashboard = function() {
         fullscreenable: false,
         btns: ['btnGrp-design', '|', 'btnGrp-lists', '|', 'link', 'formatting']
     });
-	
+	alert("done");
 	
 	
     };
@@ -327,7 +327,7 @@ var notepad =function() {
         }, 2000);
     };
     
-    function update() {
+   /* function update() {
         // send the content to the server
         $.post("backend/notepad.php", {action: "set", content: $('.notepad').html()}, function(data) {
             if(data==="1") {
@@ -337,5 +337,5 @@ var notepad =function() {
                 that.uptodate=6;
             }
         });
-    }    
+    }  */  
 };
