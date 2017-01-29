@@ -75,7 +75,7 @@ function createnav($sel) {
 function createfooter() {
     $content='<footer class="footer">
       <div class="container">
-        <p class="text-muted">Created by Alwin Ebermann</p>
+        <p class="text-muted">Created by Alwin Ebermann and Dominik Eichler</p>
       </div>
     </footer>';
     return $content;
