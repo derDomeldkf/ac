@@ -171,6 +171,26 @@ $(document).ready(function(){
 	    }
 	  });
        }
+       else{
+	 $("a").attr("href", "#"+$("a").text());
+	  $.post("backend/notepad.php", {action: "get", audioname: audioname}, function(data) {
+	    if(data==="$noentry$" || data==="<br>") {
+	    }
+	    else if(data==="0") {
+	      alert("Something went wrong.");
+	    }
+	    else {
+	      var size=1000;  
+	      $('html, body').animate({scrollTop:0}, 500);
+	      $('.audioname_stats').delay( size ).fadeOut(500).html('');
+	      $('.monthavg').fadeIn(size);
+	      $('#overall').fadeIn(size);
+	    }
+	  });
+	 
+	 
+	 
+      }
       
       
       
