@@ -1,10 +1,6 @@
 $(document).ready(function(){
     $('#savelink').focus();
-    $('.notepad').trumbowyg({
-        autogrow: true,
-        fullscreenable: false,
-        btns: ['btnGrp-design', '|', 'btnGrp-lists', '|', 'link', 'formatting']
-    });
+   
     $("#savelink").click(function() {
         addaudio();
     });
@@ -127,6 +123,11 @@ $(document).ready(function(){
     });
     $('.trumbowyg').on('tbwpaste', function() {
         note.change();
+    });
+     $('.notepad').trumbowyg({
+        autogrow: true,
+        fullscreenable: false,
+        btns: ['btnGrp-design', '|', 'btnGrp-lists', '|', 'link', 'formatting']
     });
 });
 
