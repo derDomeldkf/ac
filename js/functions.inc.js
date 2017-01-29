@@ -163,7 +163,8 @@ $(document).ready(function(){
             alert("Something went wrong.");
         }
         else {
-	  var size=500;       
+	  var size=500;  
+	  $('html, body').animate({scrollTop:0}, 500);
 	  $('.monthavg').fadeOut(size);
 	  $('#overall').fadeOut(size);
 	  
