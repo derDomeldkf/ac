@@ -151,7 +151,9 @@ $(document).ready(function(){
     $( "#mybtn2" ).click(function() {
      	$('#t1 tr:last').remove();
     });
-     
+    $(document).on("click", "a", function(){
+    $(this).text("It works!");
+});
 
 });
 
