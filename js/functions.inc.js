@@ -143,7 +143,7 @@ $(document).ready(function(){
       }
     });
      
-     var $modal = $("#editor").trumbowyg("openModal", {
+     var $modal = $(".trumbowyg").trumbowyg("openModal", {
     title: "A title for modal box",
     content: "<p>Content in HTML which you want include in created modal box</p>"
 });
