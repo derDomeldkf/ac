@@ -87,9 +87,12 @@ function createend($page) {
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery-1.11.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/functions.inc.js"></script>
+    
     <script src="js/trumbowyg/dist/trumbowyg.min.js"></script>
-    <script src="js/trumbowyg/plugins/table/trumbowyg.table.js"></script>';
+    <script src="js/trumbowyg/plugins/table/trumbowyg.table.js"></script>
+<script src="js/functions.inc.js"></script>    
+    
+    ';
     switch ($page) {
     case "main":
         $content.='<script src="js/main.js"></script>';
