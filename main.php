@@ -53,7 +53,7 @@ if($user["is_logged_in"]) {
     $content.='<p class="quote lead"></p>';
     $content.='<div class="overview row"><div class="col-xs-4"><img src="icons/hourglas_stop.png" alt="Hourglas-not working" class="hourglas"/></div><div class="col-xs-8 lead dashboard">'
             . '<div class="row"><div class="col-md-4 col-sm-7">Name:</div><div class="col-md-6 col-sm-5 activeaudio">None</div></div><div class="row"><div class="col-md-4 col-sm-7">Worked Time:</div><div class="col-md-6 col-sm-5 worktime">00:00:00</div></div><div class="row"><div class="col-md-4 col-sm-7">Since Last Stop:</div><div class="col-md-6 col-sm-5 pausetime">00:00:00</div></div><div class="row"><div class="col-sm-12 col-md-10 buttonrow"><button type="button" class="btn btn-success disabled pauseb">Pause</button><button type="button" class="stopb disabled btn btn-danger">Stop</button></div></div></div></div>';
-    $content.='<div class="container lastc"><h2>Notepad</h2><p>Notes are saved nearly in real time. Current status: <img src="icons/valid.png" alt="Saved" id="notestatus"/></p><div class="notepad"></div></div>';
+    $content.='<div class="container lastc"></div>';
     
     $content.= '</div>';
         $content.='<div class="modal fade" id="deletequestion">
