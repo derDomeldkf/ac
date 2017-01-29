@@ -128,7 +128,7 @@ $(document).ready(function(){
         alert("test");
     });
     
-    alert("done");
+    alert($('.trumbowyg').text());
     
     
     
