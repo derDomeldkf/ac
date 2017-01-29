@@ -145,8 +145,17 @@ $(document).ready(function(){
      
      
   
-     $(".trumbowyg-button-pane").append('<li><button class="trumbowyg-removeformat-buttonn">test</button></li>');
+     $(".trumbowyg-button-pane").append('<li><button class="trumbowyg-removeformat-button" id="mybtn">test</button></li>');
+    
      
+     $( "#mybtn" ).click(function() {
+  
+       
+     alert("now");  
+       
+     });
+     
+
 });
 
 function checkname() {
