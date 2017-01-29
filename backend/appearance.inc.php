@@ -12,7 +12,7 @@ function createhead($title) {
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Trumbowyg css  -->
-    <link rel="stylesheet" href="trumbowyg/dist/ui/trumbowyg.min.css">
+    <link rel="stylesheet" href="js/trumbowyg/dist/ui/trumbowyg.min.css">
     <!-- Custom styles for this template -->
     <link href="css/main.css" rel="stylesheet">
 
@@ -88,7 +88,7 @@ function createend($page) {
     <script src="js/jquery-1.11.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/functions.inc.js"></script>
-    <script src="trumbowyg/dist/trumbowyg.min.js"></script>';
+    <script src="js/trumbowyg/dist/trumbowyg.min.js"></script>';
     switch ($page) {
     case "main":
         $content.='<script src="js/main.js"></script>';
