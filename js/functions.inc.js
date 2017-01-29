@@ -3,11 +3,12 @@ $(document).ready(function(){
    $('.notepad').trumbowyg({
         autogrow: true,
         fullscreenable: false,
-        btns: ['btnGrp-design', '|', 'btnGrp-lists', '|', 'link', 'formatting',  'table',  'tableAddRow']
+        btns: ['btnGrp-design', '|', 'btnGrp-lists', '|', 'link', 'formatting',  'table',  'tableAddRow'],
+	tableBuild();
     });
    
     
-      $('.notepad').tableBuild();
+      
    
    
    
