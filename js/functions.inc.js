@@ -153,10 +153,9 @@ $(document).ready(function(){
     });
     $(document).on("click", "p", function(){
        var audioname = $(this).text();
-       alert(audioname);
-       if (audioname !== ""){
-	  $("a").attr("href", "#");
-	  $.post("backend/notepad.php", {action: "get", audioname: audioname}, function(data) {
+       if ($('.audioname_stats').html()===''){
+	 alert("leer");
+	    $.post("backend/notepad.php", {action: "get", audioname: audioname}, function(data) {
 	    if(data==="$noentry$" || data==="<br>") {
 	    }
 	    else if(data==="0") {
