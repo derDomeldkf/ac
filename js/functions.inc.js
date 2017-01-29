@@ -14,7 +14,9 @@ $(document).ready(function(){
         'btnGrp-lists',
         ['horizontalRule'],
         ['removeformat'],
-        ['fullscreen']
+        ['table'],
+	['tableAddRow']
+	
     ]
 	
     });
