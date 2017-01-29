@@ -4,7 +4,7 @@ include("../mysqlc.php");
 include("../backend/functions.inc.php");
 
 $user=  checklogin();
-
+$audioname=$_POST["audioname"];
 if($user["is_logged_in"] && isset($_POST["action"])) {
     if($_POST["action"]=="get") {
         $query="SELECT * FROM users WHERE username='" . mysql_real_escape_string($user["username"]) . "';";
@@ -14,12 +14,13 @@ if($user["is_logged_in"] && isset($_POST["action"])) {
             echo 0;
         }
         else {
+        		
             $userid=  mysql_fetch_array($result)["userid"];
-            $query2="SELECT * FROM notes WHERE userid=" . $userid;
+            $query2="SELECT * FROM notes WHERE userid='" . $userid."' and audioname LIKE '" .$audioname."'";
             $result2=  mysql_query($query2);
             if(mysql_num_rows($result2)===0) {
                 //noch kein Eintrag für notes - also einen anlegen
-                $query3="INSERT INTO `taaudiocalc`.`notes` (`id`, `userid`, `content`, `updated`) VALUES ('0', '" . $userid . "', '', CURRENT_TIMESTAMP);";
+                $query3="INSERT INTO `taaudiocalc`.`notes` (`id`, `userid`, `content`, `updated`, `audioname`) VALUES ('0', '" . $userid . "', '', CURRENT_TIMESTAMP, '". $audioname."');";
                 mysql_query($query3);
                 echo '$noentry$';
             } 
@@ -35,9 +36,10 @@ if($user["is_logged_in"] && isset($_POST["action"])) {
         }
     }
     elseif($_POST["action"]=="set") {
-        $query="UPDATE `taaudiocalc`.`notes` LEFT JOIN users on users.userid=notes.userid "
-                . "SET `content` = '" . mysql_real_escape_string($_POST["content"]) . "' WHERE `users`.`username` = '" . mysql_real_escape_string($user["username"]) . "';";
+    	
+        $query="UPDATE `taaudiocalc`.`notes` LEFT JOIN users on users.userid=notes.userid SET `content` = '" . mysql_real_escape_string($_POST["content"]) . "' WHERE `notes`.`audioname` = '". $audioname ."' and `users`.`username` = '" . mysql_real_escape_string($user["username"]) . "';";
         $result=mysql_query($query);
+
         if($result) {
             echo 1;
         }
