@@ -3,7 +3,19 @@ $(document).ready(function(){
    $('.notepad').trumbowyg({
         autogrow: true,
         fullscreenable: false,
-        btns: ['btnGrp-design', '|', 'btnGrp-lists', '|', 'link', 'formatting',  'table',  'tableAddRow'],
+        btns: [
+        ['viewHTML'],
+        ['formatting'],
+        'btnGrp-semantic',
+        ['superscript', 'subscript'],
+        ['link'],
+        ['insertImage'],
+        'btnGrp-justify',
+        'btnGrp-lists',
+        ['horizontalRule'],
+        ['removeformat'],
+        ['fullscreen']
+    ]
 	
     });
    
