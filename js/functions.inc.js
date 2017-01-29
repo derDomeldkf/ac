@@ -163,12 +163,11 @@ $(document).ready(function(){
             alert("Something went wrong.");
         }
         else {
-	 var size=1000;
-	 
-	// $('.audioname_stats').delay( size ).hide().html('<h4>Mistakes in Audio '+audioname+'</h4>'+data).fadeIn(size);
-              
-	    $('.monthavg').fadeOut(size);
-	    $('#overall').fadeOut(size);
+	  var size=1000;       
+	  $('.monthavg').fadeOut(size);
+	  $('#overall').fadeOut(size);
+	  $('.audioname_stats').delay( size ).hide().html('<h4>Mistakes in Audio '+audioname+'</h4>'+data).fadeIn(size);
+
         }
     });
       
