@@ -163,7 +163,7 @@ $(document).ready(function(){
             alert("Something went wrong.");
         }
         else {
-            $('.audioname_stats').html("<p>Mistakes in Audio "+audioname+"</p>"+data);
+            $('.audioname_stats').html("<h4>Mistakes in Audio "+audioname+"</h4>"+data);
 	   
         }
     });
