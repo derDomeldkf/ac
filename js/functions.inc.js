@@ -9,7 +9,7 @@ $(document).ready(function(){
     $('.notepad').trumbowyg({
       
       tableBuild();
-    }
+    });
    
    
     $("#savelink").click(function() {
