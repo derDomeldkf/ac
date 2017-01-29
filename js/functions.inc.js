@@ -119,7 +119,9 @@ $(document).ready(function(){
         dash.stop();
     });
     $('.trumbowyg').on('tbwchange', function() {
-        note.change();
+      alert("test");  
+      note.change();
+	
     });
     $('.trumbowyg').on('tbwpaste', function() {
         note.change();
