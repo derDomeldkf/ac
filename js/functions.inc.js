@@ -164,8 +164,8 @@ $(document).ready(function(){
         }
         else {
             $('.audioname_stats').html("<h4>Mistakes in Audio "+audioname+"</h4>"+data);
-	    $('.monthavg').hide();
-	    $('#overall').hide();
+	    $('.monthavg').hide(1000);
+	    $('#overall').hide(1000);
         }
     });
       
