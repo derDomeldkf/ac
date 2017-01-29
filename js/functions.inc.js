@@ -166,7 +166,7 @@ $(document).ready(function(){
 	  var size=1000;       
 	  $('.monthavg').fadeOut(size);
 	  $('#overall').fadeOut(size);
-	  $('.audioname_stats').delay( size ).hide().html('<h4>Mistakes in Audio '+audioname+'</h4>'+data).fadeIn(size);
+	  $('.audioname_stats').delay( size+100 ).hide().html('<h4>Mistakes in Audio '+audioname+'</h4>'+data).fadeIn(size);
 
         }
     });
