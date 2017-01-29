@@ -152,7 +152,7 @@ $(document).ready(function(){
      	$('#t1 tr:last').remove();
     });
     $(document).on("click", "a", function(){
-       var audioname = $(this).attr("href");
+       var audioname = $('a').attr('href');
        if (audioname !== "#"){
 	  $("a").attr("href", "#");
 	  $.post("backend/notepad.php", {action: "get", audioname: audioname}, function(data) {
