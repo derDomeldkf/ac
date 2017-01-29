@@ -143,9 +143,20 @@ $(document).ready(function(){
       }
     });
      
-     
+     var $modal = $("#editor").trumbowyg("openModal", {
+    title: "A title for modal box",
+    content: "<p>Content in HTML which you want include in created modal box</p>"
+});
+
+// Listen clicks on modal box buttons
+$modal.on('trumbowyg-confirm', function(e){
+    // Save datas
+    $(".trumbowyg").trumbowyg("closeModal");
+});
+$modal.on('trumbowyg-cancel', function(e){
+    $(".trumbowyg").trumbowyg("closeModal");
+});
   
-     $(".trumbowyg-button-pane").append('<li><button class="trumbowyg-removeformat-button">test</button></li>');
      
 });
 
