@@ -6,7 +6,7 @@ $(document).ready(function(){
         btns: ['btnGrp-design', '|', 'btnGrp-lists', '|', 'link', 'formatting',  'table',  'tableAddRow']
     });
    
-   
+   $('.notepad').trumbowyg.tableBuild();
    
    
    
