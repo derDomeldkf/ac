@@ -169,7 +169,7 @@ $(document).ready(function(){
 	  
 	  $(".audioname_stats").css("margin", "30px 10px 30px 10px");
 	  
-	  $('.audioname_stats').delay( size ).hide().html('<h4>Mistakes in Audio '+audioname+'</h4>'+data).fadeIn(size+200);
+	  $('.audioname_stats').delay( size ).hide().html('<h4>Mistakes in Audio '+audioname+'</h4>'+data).fadeIn(800);
 
         }
     });
