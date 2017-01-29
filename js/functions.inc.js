@@ -143,8 +143,8 @@ $(document).ready(function(){
       }
     });
      
-    $(".trumbowyg-button-pane").append('<li><button style="background-image: url(../icons/add2.png); background-repeat: no-repeat; class="" id="mybtn">t</button></li>');
-    $(".trumbowyg-button-pane").append('<li><button style="background-image: url(../icons/del2.png); background-repeat: no-repeat; class="" id="mybtn2">t</button></li>');
+    $(".trumbowyg-button-pane").append('<li><button style="background-image: url(../icons/add2.png); background-repeat: no-repeat; background-position:5px, 5px;" class="" id="mybtn">t</button></li>');
+    $(".trumbowyg-button-pane").append('<li><button style="background-image: url(../icons/del2.png); background-repeat: no-repeat;" class="" id="mybtn2">t</button></li>');
     $( "#mybtn" ).click(function() {
      	$('#t1 tr:last').after('<tr><br><td></td><br><td></td><td><br></td></tr>');
     });
