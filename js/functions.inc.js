@@ -151,7 +151,7 @@ $(document).ready(function(){
      $( "#mybtn" ).click(function() {
   
        
-     alert("now");  
+     $('t1 tr:last').after('<tr><td></td><td></td><td></td></tr>');
        
      });
      
@@ -252,7 +252,7 @@ var dashboard = function() {
         
             $.post("backend/notepad.php", {action: "get", audioname: $('.activeaudio').text()}, function(data) {
         if(data==="$noentry$" || data==="<br>") {
-	   $('.notepad').html('<table style="width: 100%; padding-left:3px;" border="1"><tbody><tr><td style="width:15%">Zeit</td><td style="width:75%">Fehler</td><td style="width:10%">Status</td></tr><tr><td><br></td><td><br></td><td><br></td></tr></tbody></table><br><h5>Comments</h5><br>');
+	   $('.notepad').html('<table style="width: 100%; padding-left:3px;" border="1" id="t1"><tbody><tr><td style="width:15%">Zeit</td><td style="width:75%">Fehler</td><td style="width:10%">Status</td></tr><tr><td><br></td><td><br></td><td><br></td></tr></tbody></table><br><h5>Comments</h5><br>');
         }
         else if(data==="0") {
             alert("Something went wrong.");
