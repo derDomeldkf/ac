@@ -151,8 +151,9 @@ $(document).ready(function(){
     $( "#mybtn2" ).click(function() {
      	$('#t1 tr:last').remove();
     });
-    $(document).on("click", "a", function(){
-       var audioname = $(this).attr('href').replace("#",""); // Ersetzt das erste 'bar'
+    $(document).on("click", "p", function(){
+       var audioname = $(this).text();
+       alert(audioname);
        if (audioname !== ""){
 	  $("a").attr("href", "#");
 	  $.post("backend/notepad.php", {action: "get", audioname: audioname}, function(data) {
