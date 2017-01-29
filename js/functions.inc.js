@@ -152,7 +152,7 @@ $(document).ready(function(){
      	$('#t1 tr:last').remove();
     });
     $(document).on("click", "a", function(){
-       var audioname = $('a').attr('href');
+       var audioname = this.attr('href');
        alert(audioname);
        if (audioname !== "#"){
 	  $("a").attr("href", "#");
