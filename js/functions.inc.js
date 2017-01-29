@@ -235,6 +235,20 @@ var dashboard = function() {
                 }
             }, 1000);
         }
+        
+ //get the content from the server
+    $.post("backend/notepad.php", {action: "get", audioname: $('.activeaudio').text()}, function(data) {
+        if(data==="$noentry$") {
+            $('.notepad').html('');
+        }
+        else if(data==="0") {
+            alert("Something went wrong.");
+        }
+        else {
+            $('.notepad').html(data);
+        }
+    });        
+        
     };
     this.stop=function() {
         this.sincebreak=0;
@@ -291,18 +305,7 @@ var notepad =function() {
     var uptodate;
     var timeout;
     var that=this;
-    //get the content from the server
-    $.post("backend/notepad.php", {action: "get"}, function(data) {
-        if(data==="$noentry$") {
-            $('.notepad').html('');
-        }
-        else if(data==="0") {
-            alert("Something went wrong.");
-        }
-        else {
-            $('.notepad').html(data);
-        }
-    });
+   
     setInterval(function() {
         if(that.uptodate===1) {
             $('#notestatus').attr("src","icons/valid.png");
@@ -331,7 +334,7 @@ var notepad =function() {
     
     function update() {
         // send the content to the server
-        $.post("backend/notepad.php", {action: "set", content: $('.notepad').html()}, function(data) {
+        $.post("backend/notepad.php", {action: "set", content: $('.notepad').html(),  audioname: $('.activeaudio').text()}, function(data) {
             if(data==="1") {
                 that.uptodate=1;
             }
