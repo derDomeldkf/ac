@@ -173,12 +173,12 @@ $(document).ready(function(){
        }
        else{
 	 $(this).attr("href", "#" + $(this).text());
-	 var size=1000;  
-	 $('html, body').animate({scrollTop:0}, 500);
-	 $('.audioname_stats').delay( size ).fadeOut(500).html('');
+	 var size=500;  
+	 $('html, body').animate({scrollTop:0}, size);
+	 $('.audioname_stats').fadeOut(size).html('');
 	 $(".audioname_stats").css("margin", "0");
-	 $('.monthavg').fadeIn(size);
-	 $('#overall').fadeIn(size);	 
+	 $('.monthavg').delay( size ).fadeIn(1000);
+	 $('#overall').delay( size ).fadeIn(1000);	 
       }
       
       
