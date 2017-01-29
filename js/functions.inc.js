@@ -1,6 +1,10 @@
 $(document).ready(function(){
     $('#savelink').focus();
-   
+    $('.notepad').trumbowyg({
+        autogrow: true,
+        fullscreenable: false,
+        btns: ['btnGrp-design', '|', 'btnGrp-lists', '|', 'link', 'formatting']
+    });
     $("#savelink").click(function() {
         addaudio();
     });
@@ -119,21 +123,11 @@ $(document).ready(function(){
         dash.stop();
     });
     $('.trumbowyg').on('tbwchange', function() {
-      alert("test");  
-      note.change();
-	
+        note.change();
     });
     $('.trumbowyg').on('tbwpaste', function() {
         note.change();
     });
-      $('.trumbowyg').on('tbwchange', function() {
-        alert("test");
-    });
-    
-    alert($('.trumbowyg').text());
-    
-    
-    
 });
 
 function checkname() {
@@ -208,15 +202,6 @@ var dashboard = function() {
         this.sincebreak=0;
         this.entry=entry;
         this.state="disabled";
-	$('.lastc').html('<h2>Notepad</h2><p>Notes are saved nearly in real time. Current status: <img src="icons/valid.png" alt="Saved" id="notestatus"/></p><div class="notepad"></div>');
-	$('.notepad').trumbowyg({
-        autogrow: true,
-        fullscreenable: false,
-        btns: ['btnGrp-design', '|', 'btnGrp-lists', '|', 'link', 'formatting']
-    });
-	
-	
-	
     };
     this.start=function() {
         if(this.state==="disabled") {
@@ -329,7 +314,7 @@ var notepad =function() {
         }, 2000);
     };
     
-   /* function update() {
+    function update() {
         // send the content to the server
         $.post("backend/notepad.php", {action: "set", content: $('.notepad').html()}, function(data) {
             if(data==="1") {
@@ -339,5 +324,5 @@ var notepad =function() {
                 that.uptodate=6;
             }
         });
-    }  */  
+    }    
 };
