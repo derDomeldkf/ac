@@ -151,7 +151,7 @@ $(document).ready(function(){
      $( "#mybtn" ).click(function() {
   
        
-     $('#t1 tr:last').after('<tr><td></td><td></td><td></td></tr>');
+     $('#t1 tr:last').after('<tr><br><td></td><br><td></td><td><br></td></tr>');
        
      });
      
