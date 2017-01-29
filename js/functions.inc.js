@@ -213,6 +213,7 @@ var dashboard = function() {
         this.sincebreak=0;
         this.entry=entry;
         this.state="disabled";
+	$('.lastc').show();
     };
     this.start=function() {
         if(this.state==="disabled") {
