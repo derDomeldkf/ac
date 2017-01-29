@@ -128,7 +128,7 @@ $(document).ready(function(){
         alert("test");
     });
     
-    
+    alert("done");
     
     
     
@@ -212,7 +212,7 @@ var dashboard = function() {
         fullscreenable: false,
         btns: ['btnGrp-design', '|', 'btnGrp-lists', '|', 'link', 'formatting']
     });
-	alert("done");
+	
 	
 	
     };
