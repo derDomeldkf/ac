@@ -153,27 +153,24 @@ $(document).ready(function(){
     });
     $(document).on("click", "a", function(){
        var audioname = $(this).text();
-      
-      
-      $.post("backend/notepad.php", {action: "get", audioname: audioname}, function(data) {
-        if(data==="$noentry$" || data==="<br>") {
-	  
-	}
-        else if(data==="0") {
-            alert("Something went wrong.");
-        }
-        else {
-	  var size=500;  
-	  $('html, body').animate({scrollTop:0}, 500);
-	  $('.monthavg').fadeOut(size);
-	  $('#overall').fadeOut(size);
-	  
-	  $(".audioname_stats").css("margin", "30px 10px 30px 10px");
-	  
-	  $('.audioname_stats').delay( size ).hide().html('<h4>Mistakes in Audio '+audioname+'</h4>'+data).fadeIn(1000);
-
-        }
-    });
+       if (audioname !== "#"){
+	  $("a").attr("href", "#");
+	  $.post("backend/notepad.php", {action: "get", audioname: audioname}, function(data) {
+	    if(data==="$noentry$" || data==="<br>") {
+	    }
+	    else if(data==="0") {
+	      alert("Something went wrong.");
+	    }
+	    else {
+	      var size=500;  
+	      $('html, body').animate({scrollTop:0}, 500);
+	      $('.monthavg').fadeOut(size);
+	      $('#overall').fadeOut(size);
+	      $(".audioname_stats").css("margin", "30px 10px 30px 10px");
+	      $('.audioname_stats').delay( size ).hide().html('<h4>Mistakes in Audio '+audioname+'</h4>'+data).fadeIn(1000);
+	    }
+	  });
+       }
       
       
       
