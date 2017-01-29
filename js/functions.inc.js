@@ -163,10 +163,9 @@ $(document).ready(function(){
             alert("Something went wrong.");
         }
         else {
-	  var size =1000;
 	 
-	 setTimeout( $('.audioname_stats').hide().html('<h4>Mistakes in Audio '+audioname+'</h4>'+data).fadeIn(size), 1000);
-            
+	 setTimeout(getmist(), 1000);
+              function getmist(){$('.audioname_stats').hide().html('<h4>Mistakes in Audio '+audioname+'</h4>'+data).fadeIn(1000);}
 	    $('.monthavg').fadeOut(size);
 	    $('#overall').fadeOut(size);
         }
