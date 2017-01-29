@@ -145,7 +145,7 @@ $(document).ready(function(){
      
      
   
-     $(".trumbowyg-button-pane").append('<li><button>test</button></li>');
+     $(".trumbowyg-button-pane").append('<li><button class="trumbowyg-removeformat-button">test</button></li>');
      
 });
 
