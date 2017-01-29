@@ -172,7 +172,7 @@ $(document).ready(function(){
 	  });
        }
        else{
-	 $("a").attr("href", "#" s+ $("a").text());
+	 $(this).attr("href", "#" + $("a").text());
 	 var size=1000;  
 	 $('html, body').animate({scrollTop:0}, 500);
 	 $('.audioname_stats').delay( size ).fadeOut(500).html('');
