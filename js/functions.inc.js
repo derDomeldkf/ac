@@ -143,17 +143,14 @@ $(document).ready(function(){
       }
     });
      
-     
-  
-     $(".trumbowyg-button-pane").append('<li><button class="trumbowyg-removeformat-button" id="mybtn">test</button></li>');
-    
-     
-     $( "#mybtn" ).click(function() {
-  
-       
-     $('#t1 tr:last').after('<tr><br><td></td><br><td></td><td><br></td></tr>');
-       
-     });
+    $(".trumbowyg-button-pane").append('<li><button class="trumbowyg-removeformat-button" id="mybtn">t</button></li>');
+    $(".trumbowyg-button-pane").append('<li><button class="trumbowyg-removeformat-button" id="mybtn2">t</button></li>');
+    $( "#mybtn" ).click(function() {
+     	$('#t1 tr:last').after('<tr><br><td></td><br><td></td><td><br></td></tr>');
+    });
+    $( "#mybtn2" ).click(function() {
+     	$('#t1 tr:last').remove();
+    });
      
 
 });
