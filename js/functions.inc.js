@@ -231,6 +231,20 @@ var dashboard = function() {
                 }
             }, 1000);
         }
+        
+            $.post("backend/notepad.php", {action: "get"}, function(data) {
+        if(data==="$noentry$") {
+            $('.notepad').html('');
+        }
+        else if(data==="0") {
+            alert("Something went wrong.");
+        }
+        else {
+            $('.notepad').html(data);
+        }
+    });
+        
+        
     };
     this.stop=function() {
         this.sincebreak=0;
@@ -288,17 +302,7 @@ var notepad =function() {
     var timeout;
     var that=this;
     //get the content from the server
-    $.post("backend/notepad.php", {action: "get"}, function(data) {
-        if(data==="$noentry$") {
-            $('.notepad').html('');
-        }
-        else if(data==="0") {
-            alert("Something went wrong.");
-        }
-        else {
-            $('.notepad').html(data);
-        }
-    });
+
     setInterval(function() {
         if(that.uptodate===1) {
             $('#notestatus').attr("src","icons/valid.png");
