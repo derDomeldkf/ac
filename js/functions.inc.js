@@ -6,8 +6,10 @@ $(document).ready(function(){
         btns: ['btnGrp-design', '|', 'btnGrp-lists', '|', 'link', 'formatting',  'table',  'tableAddRow']
     });
    
-   $('.notepad').tableBuild();
-   
+    $('.notepad').trumbowyg({
+      
+      tableBuild();
+    }
    
    
     $("#savelink").click(function() {
