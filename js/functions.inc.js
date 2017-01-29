@@ -123,14 +123,14 @@ $(document).ready(function(){
         fullscreenable: false,
         btns: ['btnGrp-design', '|', 'btnGrp-lists', '|', 'link', 'formatting']
     });
-     if( $('.activeaudio').text() !=="None"){
+     
     $('.trumbowyg').on('tbwchange', function() {
         note.change();
     });
     $('.trumbowyg').on('tbwpaste', function() {
         note.change();
     });
-     }
+     
      
      
      
