@@ -175,11 +175,11 @@ $(document).ready(function(){
 	 var audiocheck = $('.mistake_name').text();
 	 $('html, body').animate({scrollTop:0}, 500);
 	 $('.audioname_stats').fadeOut(size);
-	 $('.audioname_stats').delay( size ).html('');
+	
 	 $(".audioname_stats").delay( size ).css("margin", "0");
 	 $('.monthavg').delay( size ).fadeIn(1000);
 	 $('#overall').delay( size ).fadeIn(1000);
-
+ $('.audioname_stats').html('');
 
 	 if(audioname!==audiocheck){
 	   alert(audioname);
