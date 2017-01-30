@@ -185,7 +185,10 @@ $(document).ready(function(){
 		else {
 		  var size=500;  
 	//  $(".audioname_stats").css("margin", "30px 10px 30px 10px");
-		  $('.audioname_stats').fadeOut().html('<h4>Mistakes in Audio <span class="mistake_name">'+audioname+'</span></h4>'+data).fadeIn(size);
+		  $('.audioname_stats').fadeOut().queue(function(n) {
+		    $(this).html('<h4>Mistakes in Audio <span class="mistake_name">'+audioname+'</span></h4>'+data).fadeIn(size);
+		    n();
+		  });
 		}
 	      });
 	    
