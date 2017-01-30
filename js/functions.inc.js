@@ -180,6 +180,8 @@ $(document).ready(function(){
 
 
 	 if(audioname!==$('.mistake_name').text()){
+	   alert(audioname);
+	   alert($('.mistake_name').text());
 	    $.post("backend/notepad.php", {action: "get", audioname: audioname}, function(data) {
 	      if(data==="$noentry$" || data==="<br>") {
 	      }
