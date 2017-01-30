@@ -173,8 +173,8 @@ $(document).ready(function(){
        else{
 	 var size=500; 
 	 var audiocheck = $('.mistake_name').text();
-	 $('html, body').animate({scrollTop:0}, size);
-	 $('.audioname_stats').fadeOut(size).html('');
+	 $('html, body').animate({scrollTop:0}, 500);
+	 $('.audioname_stats').fadeOut(size).delay( size ).html('');
 	 $(".audioname_stats").css("margin", "0");
 	 $('.monthavg').delay( size ).fadeIn(1000);
 	 $('#overall').delay( size ).fadeIn(1000);
