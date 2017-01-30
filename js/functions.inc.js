@@ -176,8 +176,6 @@ $(document).ready(function(){
 	 var size=500; 
 	 var audiocheck = $('.mistake_name').text();
 	 $('html, body').animate({scrollTop:0}, 500);
-	 
-	
 	 $('.audioname_stats').fadeOut(size).delay(size).queue(function(n) {
 	    $(this).html("");
 	    $(this).css("margin", "0");
