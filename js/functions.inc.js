@@ -279,7 +279,7 @@ var dashboard = function() {
         
             $.post("backend/notepad.php", {action: "get", audioname: $('.activeaudio').text()}, function(data) {
         if(data==="$noentry$" || data==="<br>") {
-	   $('.notepad').html('<table style="width: 100%;" border="1" id="t1"><tbody><tr><td style="width:5%">Zeit</td><td style="width:85%">Fehler</td><td style="width:10%">Status</td></tr><tr><td><br></td><td><br></td><td style="white-space: nowrap;"><br></td></tr></tbody></table><br><h5>Comments</h5><br>');
+	   $('.notepad').html('<table style="width: 100%;" border="1" id="t1"><tbody><tr><td style="width:5%"><b>Zeit</b></td><td style="width:85%"><b>Fehler</b></td><td style="width:10%"><b>Status</b></td></tr><tr><td><br></td><td><br></td><td style="white-space: nowrap;"><br></td></tr></tbody></table><br><h5>Comments</h5><br>');
         }
         else if(data==="0") {
             alert("Something went wrong.");
