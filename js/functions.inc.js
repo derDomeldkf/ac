@@ -166,7 +166,7 @@ $(document).ready(function(){
 	      $('.monthavg').fadeOut(size);
 	      $('#overall').fadeOut(size);
 	      $(".audioname_stats").css("margin", "30px 10px 30px 10px");
-	      $('.audioname_stats').delay( size ).hide().html('<h4>Mistakes in Audio '+audioname+'</h4>'+data).fadeIn(1000);
+	      $('.audioname_stats').delay( size ).hide().html('<h4>Mistakes in Audio <span class="mistake_name">'+audioname+'<span></h4>'+data).fadeIn(1000);
 	    }
 	  });
        }
@@ -176,7 +176,10 @@ $(document).ready(function(){
 	 $('.audioname_stats').fadeOut(size).html('');
 	 $(".audioname_stats").css("margin", "0");
 	 $('.monthavg').delay( size ).fadeIn(1000);
-	 $('#overall').delay( size ).fadeIn(1000);	 
+	 $('#overall').delay( size ).fadeIn(1000);
+
+
+	// if(audioname!==)
       }
       
       
