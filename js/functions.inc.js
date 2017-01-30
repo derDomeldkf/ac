@@ -179,8 +179,8 @@ $(document).ready(function(){
 	 $(".audioname_stats").delay( size ).css("margin", "0");
 	 $('.monthavg').delay( size ).fadeIn(1000);
 	 $('#overall').delay( size ).fadeIn(1000);
- $('.audioname_stats').delay( 1000 ).html('');
-alert("done");
+	// $('.audioname_stats').delay( 1000 ).html('');
+
 	 if(audioname!==audiocheck){
 	   alert(audioname);
 	   alert(audiocheck);
