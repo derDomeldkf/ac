@@ -181,8 +181,8 @@ $(document).ready(function(){
 	 $('.audioname_stats').fadeOut(size).delay(size).queue(function(n) {
 	    $(this).html("");
 	    $(this).css("margin", "0");
-	    $('.monthavg').delay( size ).fadeIn(1000);
-	    $('#overall').delay( size ).fadeIn(1000);
+	    $('.monthavg').fadeIn(1000);
+	    $('#overall').fadeIn(1000);
 	    if(audioname!==audiocheck){
 	      $.post("backend/notepad.php", {action: "get", audioname: audioname}, function(data) {
 		if(data==="$noentry$" || data==="<br>") {
