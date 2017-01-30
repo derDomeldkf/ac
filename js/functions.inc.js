@@ -181,8 +181,9 @@ $(document).ready(function(){
 	    $(this).css("margin", "0");
 	    $('.monthavg').fadeIn(1000);
 	    $('#overall').fadeIn(1000);
-	    alert("faded in");
-	    if(audioname!==audiocheck){
+	   
+	});
+	  if(audioname!==audiocheck){
 	      $.post("backend/notepad.php", {action: "get", audioname: audioname}, function(data) {
 		if(data==="$noentry$" || data==="<br>") {
 		}
@@ -200,7 +201,6 @@ $(document).ready(function(){
 	      });
 	    
 	    }
-	});
       }
       
       
