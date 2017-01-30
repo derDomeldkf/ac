@@ -153,6 +153,7 @@ $(document).ready(function(){
     });
     $(document).on("click", "p", function(){
        var audioname = $(this).text();
+       alert("test");
        if ($('.audioname_stats').html()===''){
 	  $.post("backend/notepad.php", {action: "get", audioname: audioname}, function(data) {
 	    if(data==="$noentry$" || data==="<br>") {
