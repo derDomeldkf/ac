@@ -204,8 +204,9 @@ $(document).ready(function(){
 		$('.audioname_stats').delay( size ).hide().html('<h4>Mistakes in Audio <span class="mistake_name">'+audioname+'</span></h4>'+data).fadeIn(1000);
 	      }
 	    });
-	   });
+	   
 	}
+	});
       }
       
       
