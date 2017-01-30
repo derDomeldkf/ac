@@ -188,9 +188,7 @@ $(document).ready(function(){
 	// $('.audioname_stats').delay( 1000 ).html('');
 
 	 if(audioname!==audiocheck){
-	   alert(audioname);
-	   alert(audiocheck);
-	    $.post("backend/notepad.php", {action: "get", audioname: audioname}, function(data) {
+	   $.post("backend/notepad.php", {action: "get", audioname: audioname}, function(data) {
 	      if(data==="$noentry$" || data==="<br>") {
 	      }
 	      else if(data==="0") {
