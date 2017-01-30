@@ -179,17 +179,17 @@ $(document).ready(function(){
 	 
 	
 	 $('.audioname_stats').fadeOut(size)
-    .delay(size)
-    .queue(function(n) {
-        $(this).html("");
-	$(this).css("margin", "0");
-        n();
-    });
+	  .delay(size)
+	  .queue(function(n) {
+	    $(this).html("");
+	    $(this).css("margin", "0");
+	    n();
+	  });
 	 $('.monthavg').delay( size ).fadeIn(1000);
 	 $('#overall').delay( size ).fadeIn(1000);
-	// $('.audioname_stats').delay( 1000 ).html('');
-
+	alert("vor schleife");
 	 if(audioname!==audiocheck){
+	   alert("in schleife");
 	   $.post("backend/notepad.php", {action: "get", audioname: audioname}, function(data) {
 	      if(data==="$noentry$" || data==="<br>") {
 	      }
