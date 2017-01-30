@@ -184,24 +184,21 @@ $(document).ready(function(){
 		}
 		else {
 		  var size=500;  
-		  $('html, body').animate({scrollTop:0}, 500);
-		  $('.monthavg').fadeOut(size);
-		  $('#overall').fadeOut(size);
-		  $(".audioname_stats").css("margin", "30px 10px 30px 10px");
-		  $('.audioname_stats').delay( size ).hide().html('<h4>Mistakes in Audio <span class="mistake_name">'+audioname+'</span></h4>'+data).fadeIn(1000);
+	//  $(".audioname_stats").css("margin", "30px 10px 30px 10px");
+		  $('.audioname_stats').fadeOut().html('<h4>Mistakes in Audio <span class="mistake_name">'+audioname+'</span></h4>'+data).fadeIn(size);
 		}
 	      });
 	    
 	    }
 	    else{
-	 $('html, body').animate({scrollTop:0}, 500);
-	 $('.audioname_stats').fadeOut(size).queue(function(n) {
-	    $(this).html("");
-	    $(this).css("margin", "0");
-	    $('.monthavg').fadeIn(1000);
-	    $('#overall').fadeIn(1000);
-	   n();
-	});
+	      $('html, body').animate({scrollTop:0}, 500);
+	      $('.audioname_stats').fadeOut(size).queue(function(n) {
+		$(this).html("");
+		$(this).css("margin", "0");
+		$('.monthavg').fadeIn(1000);
+		$('#overall').fadeIn(1000);
+		n();
+	      });
 	    }
       }
       
