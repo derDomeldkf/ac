@@ -183,8 +183,6 @@ $(document).ready(function(){
 	$(this).css("margin", "0");
         n();
     });
-	 
-
 	 $('.monthavg').delay( size ).fadeIn(1000);
 	 $('#overall').delay( size ).fadeIn(1000);
 	// $('.audioname_stats').delay( 1000 ).html('');
