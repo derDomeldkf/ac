@@ -178,16 +178,15 @@ $(document).ready(function(){
 	 $('html, body').animate({scrollTop:0}, 500);
 	 
 	
-	 $('.audioname_stats').fadeOut(size)
-	  .delay(size)
-	  .queue(function(n) {
+	 $('.audioname_stats').fadeOut(size).delay(size).queue(function(n) {
 	    $(this).html("");
 	    $(this).css("margin", "0");
-	    n();
-	  });
-	 $('.monthavg').delay( size ).fadeIn(1000);
-	 $('#overall').delay( size ).fadeIn(1000);
-	alert("vor schleife");
+	    $('.monthavg').delay( size ).fadeIn(1000);
+	    $('#overall').delay( size ).fadeIn(1000);
+	    alert("vor schleife");
+	  
+	 
+	
 	 if(audioname!==audiocheck){
 	   alert("in schleife");
 	   $.post("backend/notepad.php", {action: "get", audioname: audioname}, function(data) {
@@ -205,7 +204,7 @@ $(document).ready(function(){
 		$('.audioname_stats').delay( size ).hide().html('<h4>Mistakes in Audio <span class="mistake_name">'+audioname+'</span></h4>'+data).fadeIn(1000);
 	      }
 	    });
-	   
+	   });
 	}
       }
       
