@@ -20,10 +20,10 @@ if($user["is_logged_in"]) {
     $content.='<p>Notice: A month here goes from the 16th of the previous month to the 15th of this month.</p>';
     $content.='<p><table class="table table-striped audiolist"><thead><tr><th>&nbsp;&nbsp;&nbsp;Name</th><th>&nbsp;&nbsp;&nbsp;Duration</th><th>Worked Time</th><th>Finished (Hourly Rate - Date)</th><th>Actions</th></tr></thead><tbody>';
     if(date("j")>15) {
-        $first_day=date("Y-m")."-16 00:00:00";;
+        $first_day=date("Y-m")."-30 00:00:00";;
     }
     else {
-        $first_day=date("Y-m", strtotime("now -1 month"))."-16 00:00:00";
+        $first_day=date("Y-m", strtotime("now -1 month"))."-30 00:00:00";
     }
     $query="SELECT * FROM audios WHERE username = '" . mysql_real_escape_string($user["username"]) . "' AND (created > \"$first_day\" OR finished = 0) ORDER BY id ASC;";
     $result=  mysql_query($query);
