@@ -182,7 +182,7 @@ $(document).ready(function(){
         $(this).html("");
 	$(this).css("margin", "0");
         n();
-    });​
+    });
 	 
 
 	 $('.monthavg').delay( size ).fadeIn(1000);
