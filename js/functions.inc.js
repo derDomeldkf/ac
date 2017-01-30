@@ -175,15 +175,7 @@ $(document).ready(function(){
        else{
 	 var size=500; 
 	 var audiocheck = $('.mistake_name').text();
-	 $('html, body').animate({scrollTop:0}, 500);
-	 $('.audioname_stats').fadeOut(size).queue(function(n) {
-	    $(this).html("");
-	    $(this).css("margin", "0");
-	    $('.monthavg').fadeIn(1000);
-	    $('#overall').fadeIn(1000);
-	   n();
-	});
-	  if(audioname!==audiocheck){
+	   if(audioname!==audiocheck){
 	      $.post("backend/notepad.php", {action: "get", audioname: audioname}, function(data) {
 		if(data==="$noentry$" || data==="<br>") {
 		}
@@ -200,6 +192,16 @@ $(document).ready(function(){
 		}
 	      });
 	    
+	    }
+	    else{
+	 $('html, body').animate({scrollTop:0}, 500);
+	 $('.audioname_stats').fadeOut(size).queue(function(n) {
+	    $(this).html("");
+	    $(this).css("margin", "0");
+	    $('.monthavg').fadeIn(1000);
+	    $('#overall').fadeIn(1000);
+	   n();
+	});
 	    }
       }
       
