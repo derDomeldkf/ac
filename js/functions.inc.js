@@ -171,7 +171,8 @@ $(document).ready(function(){
 	  });
        }
        else{
-	 var size=500;  
+	 var size=500; 
+	 var audiocheck = $('.mistake_name').text();
 	 $('html, body').animate({scrollTop:0}, size);
 	 $('.audioname_stats').fadeOut(size).html('');
 	 $(".audioname_stats").css("margin", "0");
@@ -179,9 +180,9 @@ $(document).ready(function(){
 	 $('#overall').delay( size ).fadeIn(1000);
 
 
-	 if(audioname!==$('.mistake_name').text()){
+	 if(audioname!==audiocheck){
 	   alert(audioname);
-	   alert($('.mistake_name').text());
+	   alert(audiocheck);
 	    $.post("backend/notepad.php", {action: "get", audioname: audioname}, function(data) {
 	      if(data==="$noentry$" || data==="<br>") {
 	      }
