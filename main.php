@@ -25,8 +25,7 @@ if($user["is_logged_in"]) {
     else {
         $first_day=date("Y-m)", strtotime("now -1 month"))."-16 00:00:00";
     }
-    //finishes 1 wegtun wenn...
-    $query="SELECT * FROM audios WHERE username = '" . mysql_real_escape_string($user["username"]) . "' AND (created > \"$first_day\" OR finished = 0 OR finished =1) ORDER BY id ASC;";
+    $query="SELECT * FROM audios WHERE username = '" . mysql_real_escape_string($user["username"]) . "' AND (created > \"$first_day\" OR finished = 0) ORDER BY id ASC;";
     $result=  mysql_query($query);
     while ($row = mysql_fetch_array($result)) {
         $entry=1;
